@@ -1,7 +1,7 @@
 version: '2.2'
 
 services:
-  unbound:
+  samba:
     image: "mmtnrw/samba-sorted:latest"
     restart: always
     network_mode: host
