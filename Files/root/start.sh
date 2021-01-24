@@ -13,7 +13,7 @@ echo "[info] Starting Cronie....."
 echo "[info] Starting Date Sorted Folder Script...."
 source /root/scan.sh
 
-echo "[info] Updating Adblocking...."
+echo "[info] Updating Scan Folder...."
 source /root/scan.sh
 
 /usr/sbin/nmbd -D
