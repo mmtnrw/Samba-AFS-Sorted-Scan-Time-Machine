@@ -2,6 +2,7 @@ version: '2.2'
 
 services:
   samba:
+    container_name: samba_timemachine_scan
     image: "mmtnrw/samba-sorted:latest"
     restart: always
     network_mode: host
