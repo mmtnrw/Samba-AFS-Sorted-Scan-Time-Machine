@@ -10,7 +10,8 @@ apk add --no-cache curl openssl samba avahi
 
 #RUN \
 #mkdir -p /etc/unbound/unbound.conf.d
-#RUN \
+RUN \
+sed -i 's/#enable-dbus=yes/enable-dbus=no/' /etc/avahi/avahi-daemon.conf && \
 #printf '%s\n\t' 'server:' '    auto-trust-anchor-file: "/etc/unbound/root.key"' > /etc/unbound/unbound.conf.d/root-auto-trust-anchor-file.conf && \
 #ln -s /extra /etc/unbound/extra && \
 echo "**** Cleaning up ****" && \
