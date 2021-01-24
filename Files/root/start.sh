@@ -16,6 +16,7 @@ source /root/scan.sh
 echo "[info] Updating Scan Folder...."
 source /root/scan.sh
 
+echo "[info] Starting SAMBA and AVAHI...."
 /usr/sbin/nmbd -D
 /usr/sbin/avahi-daemon -D
 /usr/sbin/smbd -F
