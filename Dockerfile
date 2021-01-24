@@ -6,7 +6,7 @@ ARG VERSION
 
 RUN \
 echo "**** Installing Packages ****" && \
-apk add --no-cache curl openssl samba avahi
+apk add --no-cache curl openssl samba avahi coreutils
 
 #RUN \
 #mkdir -p /etc/unbound/unbound.conf.d
