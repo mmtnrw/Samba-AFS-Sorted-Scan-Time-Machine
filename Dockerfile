@@ -22,12 +22,12 @@ COPY Files/ /
 
 RUN \
 echo "**** Setting Cron Job every Day for Sorted Scan ****" && \
-echo '1 0 * * * /root/sortscan.sh' >> /var/spool/cron/crontabs/root
+echo '1 0 * * * /root/scan.sh' >> /var/spool/cron/crontabs/root
 # Copying local files, Modify Executables and actualize Data
 
 RUN \
 chmod +x /root/start.sh && \
-chmod +x /root/sortscan.sh
+chmod +x /root/scan.sh
 
 # ports and volumes
 VOLUME /scan /backup
