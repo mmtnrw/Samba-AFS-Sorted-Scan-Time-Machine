@@ -2,7 +2,7 @@ version: '2.2'
 
 services:
   unbound:
-    image: "mmtnrw/Samba-AFS-Sorted-Scan-Time-Machine:latest"
+    image: "mmtnrw/samba-sorted:latest"
     restart: always
     network_mode: host
     privileged: true
