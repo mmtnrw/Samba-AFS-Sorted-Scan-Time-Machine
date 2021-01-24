@@ -1,0 +1,15 @@
+version: '2.2'
+
+services:
+  unbound:
+    image: "mmtnrw/Samba-AFS-Sorted-Scan-Time-Machine:latest"
+    restart: always
+    network_mode: host
+    privileged: true
+    tty: true
+    volumes:
+      - "./backup:/backup"
+      - "./scan:/scan"
+    environment:
+       TZ: "Europe/Amsterdam"
+       LISTEN: "127.0.0.1"
