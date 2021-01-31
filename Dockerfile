@@ -26,8 +26,8 @@ echo '1 0 * * * /root/scan.sh' >> /var/spool/cron/crontabs/root
 # Copying local files, Modify Executables and actualize Data
 
 RUN \
-smbpasswd -a -n guest && \
-smbpasswd -e guest
+smbpasswd -a -n guest || true && \
+smbpasswd -e guest || true
 
 RUN \
 chmod +x /root/start.sh && \
